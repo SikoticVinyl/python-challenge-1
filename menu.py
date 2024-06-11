@@ -50,8 +50,8 @@ menu = {
     }
 }
 
-# 1. Set up order list. Order list will store a list of dictionaries for
-# menu item name, item price, and quantity ordered
+# Set up order list.
+order= {}
 
 
 # Launch the store and present a greeting to the customer
@@ -117,7 +117,10 @@ while place_order:
                         "Price": value
                     }
                     i += 1
-            # 2. Ask customer to input menu item number
+            #Ask customer to input menu item number
+            menu_item_number = input("Type menu item number: ")
+
+            if menu_item_number.isdigit():
 
 
             # 3. Check if the customer typed a number
