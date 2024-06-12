@@ -180,6 +180,8 @@ for item_name, details in order.items():
     
     # Print the item name, price, and quantity with proper formatting
     print(f"{item_name}{item_name_spaces} | ${price:.2f}{price_spaces} | {quantity}")
+    print("----------------------------------------------")
+    print("Total:                   | amountwillbehere   ")
 
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
