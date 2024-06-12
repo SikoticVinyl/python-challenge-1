@@ -156,41 +156,30 @@ while place_order:
                 break
             case "n": #complete order
                 place_order = False 
+                print("Thank you for your order.")
                 break
             case _:
-                print("Please type (Y)es or (N)o.") 
-
-                
-                # Since the customer decided to stop ordering, thank them for
-                # their order
-
-                # Exit the keep ordering question loop
-
-
-                # Tell the customer to try again
+                print("Please try again, make sure to type (Y)es or (N)o.") 
 
 
 # Print out the customer's order
 print("This is what we are preparing for you.\n")
-
 # Uncomment the following line to check the structure of the order
-#print(order)
+print(order)
 
 print("Item name                 | Price  | Quantity")
 print("--------------------------|--------|----------")
-
 # 6. Loop through the items in the customer's order
-
+for item_name, details in order.items():
     # 7. Store the dictionary items as variables
-
-
+    price = details["Price"]
+    quantity = details["Quantity"]
     # 8. Calculate the number of spaces for formatted printing
-
-
+    num_item_spaces = 24 - len(item_name)
     # 9. Create space strings
-
-
+    item_spaces = " " * num_item_spaces
     # 10. Print the item name, price, and quantity
+    print(f"{item_name}{item_spaces}| ${price} | {quantity}")
 
 
 # 11. Calculate the cost of the order using list comprehension
