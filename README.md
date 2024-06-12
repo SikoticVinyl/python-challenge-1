@@ -13,8 +13,8 @@ This project is a console-based food truck ordering system. The system allows us
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+- [Features](#features)
+- [Struggles and Lesssions](#struggles-and-lessons)
 
 ## Installation
 
@@ -49,7 +49,7 @@ To use this food truck ordering system:
 - Ability to order multiple items from different categories.
 - Displays a summary of the order with total cost and quantity.
 
-## Struggles and Learnings
+## Struggles and Lessons
 
 During this project, I encountered several challenges and learned how to overcome them:
 
