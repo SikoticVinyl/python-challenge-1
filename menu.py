@@ -182,5 +182,6 @@ print("----------------------------------------------")
 # and print the prices.
 if order:
     total_price = sum(details["Price"] * details["Quantity"] for details in order.values())
+    total_quantity = sum(details["Quantity"] for details in order.values())
     total_spaces = " " * (24 - len("Total:"))
-    print(f"Total:{total_spaces} | ${total_price:.2f}")
+    print(f"Total:{total_spaces} | ${total_price:.2f} | {total_quantity}")
