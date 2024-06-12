@@ -31,7 +31,7 @@ To run this project on your local machine, follow these steps:
 3. Ensure you have Python installed. You can download it from [python.org](https://www.python.org/).
 4. Run the script:
    ```bash
-   python food_truck_ordering_system.py
+   python menu.py
    ```
 
 ## Usage
