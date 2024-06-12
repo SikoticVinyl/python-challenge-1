@@ -51,7 +51,7 @@ menu = {
 }
 
 # Set empty order list.
-order= {}
+order= []
 
 
 # Launchs the store and presents a greeting to the customer
@@ -132,10 +132,11 @@ while place_order:
                     else:
                         quantity = 1
                     # Adds the item name, price, and quantity to the previously empty order list
-                    order[item_name] = {
+                    order.append({
+                        "Item name": item_name,
                         "Price": menu_items[int(menu_item_number)]["Price"],
                         "Quantity": quantity
-                    }
+                    })
                 else:
                     print("You didn't select a menu option.")
 
@@ -166,10 +167,11 @@ print("This is what we are preparing for you.\n")
 print("Item name                | Price   | Quantity")
 print("-------------------------|---------|----------")
 
-for item_name, details in order.items():
+for item in order:
     #Stores the dictionary items as variables
-    price = details["Price"]
-    quantity = details["Quantity"]
+    item_name = item["Item name"]
+    price = item["Price"]
+    quantity = item["Quantity"]
     # Calculates the number of spaces needed for formatting
     item_name_spaces = " " * (24 - len(item_name))
     price_spaces = " " * (6 - len(f"{price:.2f}"))
@@ -181,7 +183,7 @@ print("----------------------------------------------")
 #Calculating the cost of the order by multiplying the price by quantity for each item in the order list, then sum()
 # and print the prices.
 if order:
-    total_price = sum(details["Price"] * details["Quantity"] for details in order.values())
-    total_quantity = sum(details["Quantity"] for details in order.values())
+    total_price = sum(item["Price"] * item["Quantity"] for item in order)
+    total_quantity = sum(item["Quantity"] for item in order)
     total_spaces = " " * (24 - len("Total:"))
     print(f"Total:{total_spaces} | ${total_price:.2f} | {total_quantity}")
