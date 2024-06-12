@@ -177,10 +177,10 @@ for item_name, details in order.items():
     # Prints the item name, price, and quantity
     print(f"{item_name}{item_name_spaces} | ${price:.2f}{price_spaces} | {quantity}")
 print("----------------------------------------------")
-#print(f"Total:                   | ${total:.2}   ")
-#Calculating the cost of the order
-for item_name, details in order.items():
-    price = details["Price"]
-    quantity = details["Quantity"]
-# Multiply the price by quantity for each item in the order list, then sum()
+
+#Calculating the cost of the order by multiplying the price by quantity for each item in the order list, then sum()
 # and print the prices.
+if order:
+    total_price = sum(details["Price"] * details["Quantity"] for details in order.values())
+    total_spaces = " " * (24 - len("Total:"))
+    print(f"Total:{total_spaces} | ${total_price:.2f}")
